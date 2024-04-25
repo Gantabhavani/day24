@@ -8,101 +8,125 @@
         *{
             box-sizing: border-box;
         }
-        #head{
+        #nav{
             width:100%;
-            margin:5px;
             display:grid;
-            grid-template-columns: 33.3% 33.3% 33.4%;
-            grid-template-rows: 33.3% 33.3% 33.4% 33.3%;
-            row-gap: 0px;
-            column-gap: 0px;
+            gap: 0px;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: 33% 33% 33%;
         }
-        #head #img{
-            opacity:0.7;
+        #nav img{
+            opacity: 0.8;
         }
-       #head #img:hover{
-        opacity:1.0;
-       }
-       #about{
-        width:100%;
-        height:100%;
-        background-color: gray;
-        padding:100px 20%;
-        color:white;
-        font-size: larger;
-        text-align: justify;
-       }
-       #div #btn1{
-        padding-left: 90px;
-       }
-       #tech,#web,#photo{
-        max-width:100%;
-        height:40px;
-        background-color: whitesmoke;
-        display:flex;
-        justify-content: stretch;
-        align-items: center;
-        align-content: center;
-        position:relative;
-       }
-      #tech #fill{
-        width:90%;
-        height:40px;
-        background-color:lightgray;
-       }
-       #tech #val{
-        padding:10px;
-        position:absolute;
-        top:0;
-        left:50%;
-       }
-       #web #webfill{
-        width:85%;
-        height:40px;
-        background-color:lightgray;
-       }
-       #web #webval{
-        padding:10px;
-        position:absolute;
-        top:0;
-        left:50%;
-       }
-       #photo #photofill{
-        width:80%;
-        height:40px;
-        background-color:lightgray;
-       }
-       #photo #photoval{
-        padding:10px;
-        position:absolute;
-        top:0;
-        left:50%;
-       }
-       #table{
-        display:flex;
-        width:100%;
-        height:60%;
-        justify-content: space-between;
-       }
-       #table1,#table2{
-        border:1px solid black;
-        border-collapse: collapse;
-        padding:40px;
-        background-color: white;
-        color:black;
-        font-size: xx-large;
-       }
-       #table1 td,#table2 td{
-        border: 1px solid black;
-        padding:40px;
-        text-align: center;
-       }
-       #contact{
-        max-width:100%;
-        max-height:100%;
-        margin: 30px 20%;
-        font-size: larger;
-       }
+        #nav img:hover{
+            opacity: 1.0;
+        }
+        #about{
+            width:100%;
+            height:100%;
+            padding:10%;
+            font-size: large;
+            color: white;
+            background-color: gray;
+
+        }
+        #about #me{
+            width:100%;
+            padding-left: 50%;
+
+        }
+        .bar{
+            position:relative;
+            width:100%;
+            height:40px;
+            background-color:white;
+            color: black;
+        }
+        .bar #one1{
+            width:90%;
+            height: 40px;
+            background-color:lightgrey;
+        }
+        #onefill{
+            position: absolute;
+            left:50%;
+            padding: 10px;
+        }
+        .bar #two1{
+            width:85%;
+            height: 40px;
+            background-color:lightgrey;
+        }
+        #twofill{
+            position: absolute;
+            left:50%;
+            padding: 10px;
+        }
+        .bar #three{
+            width:80%;
+            height: 40px;
+            background-color:lightgrey;
+        }
+        #threefill{
+            position: absolute;
+            left:50%;
+            padding: 10px;
+        }
+        #download{
+            padding: 10px;
+            font-size: larger;
+            margin-top: 30px;
+        }
+        #charge{
+            display: flex;
+            justify-content: space-between;
+        }
+        #one{
+            width:40%;
+            height:40%;
+            display: flex;
+            flex-direction: column;
+            font-size: x-large;
+            border:1px solid black;
+            text-align: center;
+            background-color: lightgrey;
+            color:black;
+            opacity: 0.7;
+        }
+        #one div{
+            border:1px solid black;
+            padding: 20px;
+        }
+        #one:hover{
+            opacity:1;
+        }
+        #two{
+            width:40%;
+            height:40%;
+            display: flex;
+            flex-direction: column;
+            font-size: x-large;
+            border:1px solid black;
+            text-align: center;
+            background-color: lightgrey;
+            color:black;
+            opacity: 0.7;
+        }
+        #two div{
+            border:1px solid black;
+            padding: 20px;
+        }
+        #two:hover{
+            opacity:1;
+        }
+        #contact{
+            width:100%;
+            padding:10%;
+            background-color: lightgrey;
+        }
+        #contact h1{
+            padding-left: 50%;
+        }
        #name,#email,#subject,#comment,#submit{
         border:1px solid black;
         width:80%;
@@ -115,18 +139,16 @@
         color: white;
        }
        #foot{
-        max-width:100%;
-        max-height:50%;
         display: flex;
-        background-color: lightgray;
-    }
-    #footer,#blog,#tags{
-            max-width:32%;
-            float:left;
-        }
-        #footer{
+        justify-content: flex-start;
+       }
+       #footer{
+             width:33%;
             font-size: large;
             padding:20px;
+        }
+        #blog{
+            width:33%;
         }
         #blog img{
             max-width:80px;
@@ -140,147 +162,149 @@
                 color: grey;
                 opacity:0.7;
             }
-        
-        
+        #tags{
+            width:33%;
+        }
         #tags button{
-            padding:5px;
-            width:18%;
             margin:5px;
         }
-   @media screen and (min-width:400px)and (max-width:700px) {
-    #head{
-        display:flex;
-        flex-direction: column;
-        }
-    #table{
+ @media screen and (min-width:200px) and (max-width:500px){
+    #nav{
+        width: 100%;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
     }
-    #table1{
-        margin-bottom: 50px;
-    }
-    #foot{
-        display:flex;
-        flex-direction: column;
-    }
-    #footer,#blog,#tags{
-            max-width:100%;
+    #charge{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-   }    
-
+        #one{
+            width:100%;
+            margin-bottom: 30px;
+        }
+        #two{
+            width:100%;
+        }
+        #foot{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+       }
+       #footer,#tags,#blogs{
+        width:100%;
+       }
+       #contact h1{
+            padding-left: 0%;
+        }
+ }
     </style>
 </head>
 <body>
-    <div id="head">
-        <img id="img" src="https://www.w3schools.com/w3images/girl_mountain.jpg" width="100%" height="100%" >
-        <img id="img" src="https://www.w3schools.com/w3images/man_bench.jpg" width="100%" height="100%">
-        <img  id="img" src="https://www.w3schools.com/w3images/girl_train.jpg" width="100%" height="100%">
-        <img id="img" src="https://www.w3schools.com/w3images/girl.jpg" width="100%" height="100%">
-        <img id="img" src="https://www.w3schools.com/w3images/natureboy.jpg" width="100%" height="100%">
-        <img id="img" src="https://www.w3schools.com/w3images/closegirl.jpg" width="100%" height="100%">
-        <img id="img" src="https://www.w3schools.com/w3images/girl.jpg" width="100%" height="100%">
-        <img id="img" src="https://www.w3schools.com/w3images/natureboy.jpg" width="100%" height="100%">
-        <img id="img" src="https://www.w3schools.com/w3images/closegirl.jpg" width="100%" height="100%">
+    <div id="nav">
+        <img src="https://www.w3schools.com/w3images/natureboy.jpg" width="100%" height="100%">
+        <img src="https://www.w3schools.com/w3images/boy.jpg" width="100%" height="100%">
+        <img src="https://www.w3schools.com/w3images/girl.jpg" width="100%" height="100%">
+        <img src="https://www.w3schools.com/w3images/girl_mountain.jpg" width="100%" height="100%">
+        <img src="https://www.w3schools.com/w3images/man_bench.jpg" width="100%" height="100%">
+        <img src="https://www.w3schools.com/w3images/girl_train.jpg" width="100%" height="100%">
+        <img src="https://www.w3schools.com/w3images/girl.jpg" width="100%" height="100%">
+        <img src="https://www.w3schools.com/w3images/natureboy.jpg" width="100%" height="100%">
+        <img src="https://www.w3schools.com/w3images/closegirl.jpg" width="100%" height="100%">
     </div>
     <div id="about">
-        <h1 style="font-size:large;padding-left:45% ;color:white">ABOUT ME</h1>
-        <img src=" https://www.w3schools.com/w3images/avatar_hat.jpg" width="100%" height="100%">
-        <h2>MYNAME</h2>
-        <p>
-            Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-        <span >mail: example@example.com</span><br>
-        <span>tel: 5353 35531</span><br>
+        <span id="me">About Me</span><br>
+        <img src="https://www.w3schools.com/w3images/avatar_hat.jpg" width="100%" height="50%">
+        <span>My Name</span>
+        <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>mail: example@example.com</p>
+        <p>tel: 5353 35531</p>
         <hr>
         <h2>Technical Skills</h2>
-        <div>Photography</div>
-        <div id="tech">           
-            <div id="fill"></div>
-            <div id="val">95%</div>
+        <span>Photography</span>
+        <div class="bar">
+            <div id="one1"><div id="onefill">90%</div>
         </div>
-        <div style="color:white;margin-bottom: 30px;margin-top: 30px;font-size:x-large;">WEB DESIGN</div>
-        <div id="web">
-            <div id="webfill"></div>
-            <div id="webval">85%</div>
         </div>
-        <div style="color:white;margin-bottom:30px;margin-top: 30px; font-size: x-large;">Photo Shop</div>
-        <div id="photo">
-            <div id="photofill"></div>
-            <div id="photoval">80%</div>
+       <span>Web Design</span>
+        <div class="bar">
+            <div id="two1"><div id="twofill">85%</div>
         </div>
-        <button style="min-width:60px;padding:20px;margin:30px;margin-left: 0px;">DOWNLOAD RESUME</button>
+        </div>
+        <span>Photoshop</span>
+        <div class="bar">
+            <div id="three"><div id="threefill">80%</div>
+        </div>
+        </div>
+        <button id="download">Download Resume</button>
         <hr>
-        <h1 style="color:white;font-size: large;">HOW MUCH I CHARGE</h1>
-        <div id="table">
-            <div id="table">
-                <table id="table1">
-                    <tr rowspan="2" style="background-color: black;color: white;"><td>Basic</td></tr>
-                    <tr><td>Web Design</td></tr>
-                    <tr><td>Photography</td></tr>
-                    <tr><td>5GB Storage</td></tr>
-                    <tr><td>Mail Support</td></tr>
-                    <tr><td>$ 10</td></tr>
-                    <tr><td>per month</td></tr>
-                    <tr><td><button type="signup" style="font-size: xx-large;">SignUp</button></td></tr>
-            
-            
-                </table>
-                <table id="table2">
-                    <tr rowspan="2" style="background-color: black;color: white;"><td>Basic</td></tr>
-                    <tr><td>Web Design</td></tr>
-                    <tr><td>Photography</td></tr>
-                    <tr><td>50GB Storage</td></tr>
-                    <tr><td>Endless Support</td></tr>
-                    <tr><td>$ 10</td></tr>
-                    <tr><td>per month</td></tr>
-                    <tr><td><button type="signup" style="font-size: xx-large;">SignUp</button></td></tr>
-            
-                </table>
+        <p><b>How much i charge</b></p> 
+        <div id="charge">
+        <div id="one">
+           <div style="background-color: black;">Basic</div>
+           <div>Web Design</div>
+           <div>Photography</div>
+           <div>5GB Storage</div>
+           <div>Mail Support</div>
+           <div>$ 10
+            <br>per month
+           </div>
+           <div><button style="padding: 20px;">sign-up</button></div>
+        </div>
+        <div id="two">
+            <div style="background-color: black;">Basic</div>
+            <div>Web Design</div>
+            <div>Photography</div>
+            <div>50GB Storage</div>
+            <div>Endless Support</div>
+            <div>$ 20
+             <br>per month
             </div>
-        </div>
-    </div>    
+            <div><button style="padding: 20px;">sign-up</button></div>
+         </div>
+         </div>
+    </div>
     <div id="contact">
-        <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-        <p>Lets get in touch and talk about your next project.</p>
+        <h1>Contact ME</h1>
+        <p>Do you want me to photograph you? Fill out the form and fill me in with the details :) I love meeting new people!</p>
         <form action="/action_page.php" target="_blank">
-          <input id="name" type="text" placeholder="Name" required name="Name">
-          <input id="email" type="text" placeholder="Email" required name="Email">
-          <input id="subject" type="text" placeholder="Subject" required name="Subject">
-          <input id="comment" type="text" placeholder="Comment" required name="Comment"><br>
-          <button id="submit" type="submit">SEND MESSAGE
-        </button>
-        </form>
-      </div>
-      <div id="foot">
-        <div id="footer">
-            <h2>Info</h2>
-            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-        </div>
-        <div id="blog">
-            <h2>BLOG POSTS</h2>
-            <div id="h1">
-            <img src="https://www.w3schools.com/w3images/workshop.jpg">
-            <span>Lorem</span>
-             <span>Sed mattis nunc</span><hr></div>
-             <div id="h2">
-             <img src="https://www.w3schools.com/w3images/gondol.jpg">
-             <span>Ipsum</span>
-             <span>Praes tinci sed</span></div>
-        </div>
-        <div id="tags"><h1>Travel Blogs</h1>
-            <button style="background-color: black; color: white;">Travel</button>
-            <button style="background-color:grey; color: white;">Newyork</button>
-            <button style="background-color:grey; color: white;">dinner</button>
-            <button style="background-color:grey; color: white;">salmon</button>
-            <button style="background-color:grey; color: white;">drinks</button>
-            <button style="background-color:grey; color: white;">ideas</button>
-            <button style="background-color:grey; color: white;">cuisines</button>
-            <button style="background-color:grey; color: white;">chicken</button>
-            <button style="background-color:grey; color: white;">dressing</button>
-            <button style="background-color:grey; color: white;">fried</button>
-            <button style="background-color:grey; color: white;">duck</button>
-        </div>
-      </div>
+            <input id="name" type="text" placeholder="Name" required name="Name">
+            <input id="email" type="text" placeholder="Email" required name="Email">
+            <input id="subject" type="text" placeholder="Subject" required name="Subject">
+            <input id="comment" type="text" placeholder="Comment" required name="Comment"><br>
+            <button id="submit" type="submit">SEND MESSAGE
+          </button>
+          </form>
+    </div>
+        <div id="foot">
+            <div id="footer">
+                <h2>Info</h2>
+                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+            </div>
+            <div id="blog">
+                <h2>BLOG POSTS</h2>
+                <div id="h1">
+                <img src="https://www.w3schools.com/w3images/workshop.jpg">
+                <span>Lorem</span>
+                 <span>Sed mattis nunc</span><hr></div>
+                 <div id="h2">
+                 <img src="https://www.w3schools.com/w3images/gondol.jpg">
+                 <span>Ipsum</span>
+                 <span>Praes tinci sed</span></div>
+            </div>
+            <div id="tags"><h1>Travel Blogs</h1>
+                <button style="background-color: black; color: white;">Travel</button>
+                <button>Newyork</button>
+                <button>dinner</button>
+                <button>salmon</button>
+                <button>drinks</button>
+                <button>ideas</button>
+                <button>cuisines</button>
+                <button>chicken</button>
+                <button>dressing</button>
+                <button>fried</button>
+                <button>duck</button>
+            </div>
+    </div>
 </body>
 </html>
